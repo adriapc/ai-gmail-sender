@@ -23,6 +23,7 @@ def generate_email(prompt_text: str, sender_name: str) -> dict:
             "Write a clear, professional, and engaging email. "
             "Keep the response short. "
             f"The sender's name is {sender_name}. "
+            "Don't include recipient name unless specified in the prompt."
             "Write a greeting at the start and a closing at the end. "
             "Do NOT write the subject."
         )
