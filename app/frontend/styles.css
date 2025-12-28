@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #121212; 
+    color: #e0e0e0; 
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 800px;
+    max-width: 95%;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #4a90e2; 
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #b0b0b0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #b0b0b0;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: #1e1e1e; 
+    color: #fff;
+    resize: vertical;
+}
+
+textarea {
+    min-height: 100px;
+}
+
+.button-group {
+    margin: 15px 0;
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4a90e2; 
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #357abd;
+}
+
+.output {
+    margin-top: 20px;
+}
+
+.output h3 {
+    margin-bottom: 5px;
+    color: #4a90e2;
+}
+
+.output input,
+.output textarea {
+    background-color: #1e1e1e;
+    color: #fff;
+}
