@@ -5,6 +5,16 @@
     font-family: 'Arial', sans-serif;
 }
 
+.hidden {
+    display: none !important;
+}
+
+button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
 body {
     background-color: #121212; 
     color: #e0e0e0; 
@@ -24,7 +34,7 @@ header {
 }
 
 header h1 {
-    color: #4a90e2; 
+    color: #00aaff; 
     margin-bottom: 5px;
 }
 
@@ -62,6 +72,7 @@ textarea {
 .button-group {
     margin: 15px 0;
     display: flex;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -72,7 +83,7 @@ button {
     cursor: pointer;
     font-weight: bold;
     color: #fff;
-    background-color: #4a90e2; 
+    background-color: #00aaff; 
     transition: background-color 0.2s;
 }
 
@@ -82,15 +93,37 @@ button:hover {
 
 .output {
     margin-top: 20px;
+    padding: 15px;
+    background-color: #1a1a1a; /* dark background */
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* spacing between children */
 }
 
 .output h3 {
-    margin-bottom: 5px;
-    color: #4a90e2;
+    margin: 0;
+    color: #00aaff; /* blue headings */
+    font-size: 16px;
 }
 
 .output input,
 .output textarea {
-    background-color: #1e1e1e;
-    color: #fff;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #222;
+    color: #eee;
+    font-size: 14px;
+    resize: vertical; /* allow vertical resizing for textarea */
+    box-sizing: border-box;
+}
+
+.output input {
+    height: 35px;
+}
+
+.output textarea {
+    min-height: 300px;
 }
