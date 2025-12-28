@@ -24,11 +24,11 @@ def get_address(s):
         raise ValueError('Invalid email address')
 
 
-def send_email(recipient, subj, content):
+def send_email(recipient, subject, content):
     recipient = get_address(recipient)
 
-    if not subj.strip():
-        raise ValueError("Email subject is empty")
+    if not subject.strip():
+        raise ValueError("Email subjectect is empty")
 
     if not content.strip():
         raise ValueError("Email body is empty")
@@ -36,7 +36,7 @@ def send_email(recipient, subj, content):
     try:
         yag.send(
             to=recipient,
-            subject=subj,
+            subject=subject,
             contents=content
         )
     except Exception as e:
