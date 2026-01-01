@@ -1,11 +1,16 @@
 import os
+import sys
 import webview
 from backend.api import Api
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+def get_base_dir():
+    if getattr(sys, 'frozen', False):
+        return sys._MEIPASS
+    
+    return os.path.dirname(os.path.abspath(__file__))
 
 def get_html_path():
-    return os.path.join(BASE_DIR, 'frontend', 'index.html')
+    return os.path.join(get_base_dir(), 'frontend', 'index.html')
 
 if __name__ == '__main__':
     api = Api()
